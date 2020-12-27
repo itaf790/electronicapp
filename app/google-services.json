@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "529669501582",
+    "project_id": "electronicapp-e19a2",
+    "storage_bucket": "electronicapp-e19a2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:529669501582:android:d5a2902a2f63261dbc4fdf",
+        "android_client_info": {
+          "package_name": "com.app.electronicapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "529669501582-q2fa5i681u9uisbpakqubc6hnu3qfeu7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCqtI3o-o8okdJu3gGTjDxTe1AAVegWusE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "529669501582-q2fa5i681u9uisbpakqubc6hnu3qfeu7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
