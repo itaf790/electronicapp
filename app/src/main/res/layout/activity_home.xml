@@ -55,7 +55,7 @@
         android:layout_marginBottom="5dp"
 
         android:padding="20dp"
-        android:text="@string/account_already_exists_sign_in"
+        android:text="Usersign up"
         android:textAllCaps="false"
 
         android:textSize="18sp"
