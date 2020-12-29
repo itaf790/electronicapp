@@ -23,28 +23,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         mAuth = FirebaseAuth.getInstance();
         currentUser = mAuth.getCurrentUser();
-        logout = (Button)findViewById(R.id.logout);
-        //To logout from the application
-        logout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                FirebaseAuth.getInstance().signOut();
-                //After logging out send user to Login Activity to login again
-                sendToLoginActivity();
-            }
-        });
-    }
 
-    @Override
-    protected void onStart() {
-        super.onStart();
-        //Check if user has already signed in if not send user to Login Activity
-        if(currentUser==null)
-        {
-            sendToLoginActivity();
-        }
     }
-
+// impotrant
     private void sendToLoginActivity() {
         //To send user to Login Activity
         Intent loginIntent = new Intent(MainActivity.this,LoginActivity.class);
