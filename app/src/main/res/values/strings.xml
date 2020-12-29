@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">electronicapp</string>
+    <string name="app_name">PHD CENTER</string>
     <string name="already_admin_sign_in">already_admin_sign_in</string>
     <string name="account_already_exists_sign_in">account_already_exists_sign_in</string>
     <string name="sign_in">string/sign_in</string>
