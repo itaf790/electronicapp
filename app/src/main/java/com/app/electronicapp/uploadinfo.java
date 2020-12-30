@@ -5,7 +5,7 @@ public class uploadinfo {
 
          public String imageName;
          public String imagephone;
-         public String imageday;
+         public String imagetime;
          public String imagedate;
          public String imageURL;
     public uploadinfo() { }
@@ -14,7 +14,7 @@ public class uploadinfo {
             this.imageName = name;
             this.imagephone =phone;
             this.imagedate = date;
-            this.imageday = day;
+            this.imagetime = day;
             this.imageURL = url;
         }
 
@@ -25,7 +25,7 @@ public class uploadinfo {
         return imagephone;
     }
         public String getImageday() {
-        return imageday;
+        return imagetime;
     }
         public String getImagedate() {
         return imagedate;

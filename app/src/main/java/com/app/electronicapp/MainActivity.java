@@ -37,8 +37,8 @@ import java.io.IOException;
 public class MainActivity extends AppCompatActivity {
     FirebaseUser currentUser;//used to store current user of account
     FirebaseAuth mAuth;//Used for firebase authentication
-    Button insert, choose;
-    EditText Name,phone,day,date ;
+    Button insert, choose,update,delete;
+    EditText Name,phone,time,date ;
     ImageView imgview;
     Uri FilePathUri;
     StorageReference storageReference;
@@ -53,20 +53,38 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
         mAuth = FirebaseAuth.getInstance();
         currentUser = mAuth.getCurrentUser();
         storageReference = FirebaseStorage.getInstance().getReference();
         databaseReference = FirebaseDatabase.getInstance().getReference(Database_Path);
         choose = (Button)findViewById(R.id.Choose);
+        delete= (Button)findViewById(R.id.delete);
+        update = (Button)findViewById(R.id.update);
         insert= (Button)findViewById(R.id.Insert);
         Name = (EditText)findViewById(R.id.Name);
         phone = (EditText)findViewById(R.id.phone);
-        day = (EditText)findViewById(R.id.day);
+        time = (EditText)findViewById(R.id.time);
         date = (EditText)findViewById(R.id.date);
         imgview = (ImageView)findViewById(R.id.imageView);
         progressDialog = new ProgressDialog(MainActivity.this);// context name as per your project name
+       delete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this,deleteactivity.class);
 
+                startActivity(intent);
+            }
+        });
+      update.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this,updateactivity.class);
 
+                startActivity(intent);
+            }
+      });
         choose.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -156,18 +174,18 @@ public class MainActivity extends AppCompatActivity {
                 public void onSuccess(Uri uri) {
                     String TempImageName = Name.getText().toString().trim();
                     String TempImagephone = phone.getText().toString().trim();
-                    String TempImageday = day.getText().toString().trim();
+                    String TempImagetime = time.getText().toString().trim();
                     String TempImagedate = date.getText().toString().trim();
                     // Hiding the progressDialog after done uploading.
                     progressDialog.dismiss();
                     // Showing toast message after done uploading.
                     Toast.makeText(getApplicationContext(),
-                            "Image Uploaded Successfully ",
+                            "The appointment has been booked successfully ",
                             Toast.LENGTH_LONG).show();
                     @SuppressWarnings("VisibleForTests")
 
                     uploadinfo imageUploadInfo = new uploadinfo(
-                            TempImageName,TempImagephone,TempImageday,TempImagedate,uri.toString());
+                            TempImageName,TempImagephone,TempImagetime,TempImagedate,uri.toString());
                     // Getting image upload ID.
 
                     // Adding image upload id s child element into databaseReference.
@@ -202,6 +220,7 @@ public class MainActivity extends AppCompatActivity {
         Intent loginIntent = new Intent(MainActivity.this,LoginActivity.class);
         startActivity(loginIntent);
     }
+
 }
 
 
