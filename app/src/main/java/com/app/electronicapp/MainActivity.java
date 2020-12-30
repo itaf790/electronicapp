@@ -80,7 +80,7 @@ public class MainActivity extends AppCompatActivity {
       update.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this,updateactivity.class);
+                Intent intent = new Intent(MainActivity.this,ID.class);
 
                 startActivity(intent);
             }
@@ -173,19 +173,19 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onSuccess(Uri uri) {
                     String TempImageName = Name.getText().toString().trim();
-                    String TempImagephone = phone.getText().toString().trim();
                     String TempImagetime = time.getText().toString().trim();
                     String TempImagedate = date.getText().toString().trim();
+                    String TempImagephone = phone.getText().toString().trim();
                     // Hiding the progressDialog after done uploading.
                     progressDialog.dismiss();
                     // Showing toast message after done uploading.
                     Toast.makeText(getApplicationContext(),
-                            "The appointment has been booked successfully ",
+                            "Image Uploaded Successfully ",
                             Toast.LENGTH_LONG).show();
                     @SuppressWarnings("VisibleForTests")
 
                     uploadinfo imageUploadInfo = new uploadinfo(
-                            TempImageName,TempImagephone,TempImagetime,TempImagedate,uri.toString());
+                            TempImageName,TempImagetime,TempImagephone,TempImagedate,uri.toString());
                     // Getting image upload ID.
 
                     // Adding image upload id s child element into databaseReference.
@@ -209,18 +209,9 @@ public class MainActivity extends AppCompatActivity {
         else {
             Toast.makeText(MainActivity.this,
 
-                    "Please Select Image ",
+                    "Please Select Image or Add Image Name",
                     Toast.LENGTH_LONG).show();
         }
-
     }
-// impotrant
-    private void sendToLoginActivity() {
-        //To send user to Login Activity
-        Intent loginIntent = new Intent(MainActivity.this,LoginActivity.class);
-        startActivity(loginIntent);
-    }
-
 }
-
 

@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Electronicapp">
-        <activity android:name=".deleteactivity"></activity>
+        <activity android:name=".DetailsActivity"></activity>
+
+        <activity android:name=".ID" />
+        <activity android:name=".deleteactivity" />
         <activity android:name=".updateactivity" />
         <activity android:name=".about" />
         <activity android:name=".home" />

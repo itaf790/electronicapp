@@ -24,7 +24,7 @@ public class uploadinfo {
         public String getImagephone() {
         return imagephone;
     }
-        public String getImageday() {
+        public String getImagetime() {
         return imagetime;
     }
         public String getImagedate() {
