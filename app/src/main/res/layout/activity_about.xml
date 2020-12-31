@@ -5,6 +5,7 @@
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/back"
 
     android:padding="5dp"
     tools:context=".MainActivity">
@@ -23,7 +24,7 @@
             android:paddingTop="2dp"
             android:paddingRight="2dp"
          android:text="The phd center provides software solutions and training courses in the fields of industrial automation - smart buildings - information technology - computerized electronics) If you want to book an appointment, you can use the application and register your data. You can contact by email: phdcenter423@gmail.com
-"            android:textColor="#3F51B5"
+"            android:textColor="#EBEFF3"
             android:textSize="30sp"
             app:fontFamily="casual" />
 

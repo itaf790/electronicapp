@@ -20,6 +20,7 @@ android:layout_height="match_parent">
         android:layout_marginTop="40dp"
         android:gravity="center"
         android:text="Enter Data to update"
+        android:textColor="#2196F3"
         android:textSize="30dp"
         android:textStyle="bold" />
 
@@ -36,9 +37,10 @@ android:layout_height="match_parent">
             android:id="@+id/textView0"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
             android:text="ID"
-            android:textSize="30dp"
-            android:layout_marginLeft="15dp"/>
+            android:textColor="#2196F3"
+            android:textSize="30dp" />
 
 
 
@@ -68,9 +70,10 @@ android:layout_height="match_parent">
             android:id="@+id/textView1"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
             android:text="Name"
-            android:textSize="30dp"
-            android:layout_marginLeft="15dp"/>
+            android:textColor="#2196F3"
+            android:textSize="30dp" />
 
 
 
@@ -95,9 +98,10 @@ android:layout_height="match_parent">
             android:id="@+id/num"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
             android:text="phone num"
-            android:textSize="30dp"
-            android:layout_marginLeft="15dp"/>
+            android:textColor="#2196F3"
+            android:textSize="30dp" />
 
 
         <EditText
@@ -122,9 +126,10 @@ android:layout_height="match_parent">
             android:id="@+id/Time"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
             android:text="time/am/pm"
-            android:textSize="28dp"
-            android:layout_marginLeft="15dp"/>
+            android:textColor="#2196F3"
+            android:textSize="28dp" />
 
 
 
@@ -152,6 +157,7 @@ android:layout_height="match_parent">
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
             android:text="date"
+            android:textColor="#2196F3"
             android:textSize="27dp" />
 
 

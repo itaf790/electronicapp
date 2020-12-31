@@ -4,24 +4,68 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/icon"
+        android:icon="@drawable/phd"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Electronicapp">
-        <activity android:name=".DetailsActivity"></activity>
+        <activity android:name=".DetailsActivity"
+            android:parentActivityName=".viewactivity"
+            android:label="
+Scheduled appointments">
+        </activity>
 
-        <activity android:name=".ID" />
-        <activity android:name=".deleteactivity" />
-        <activity android:name=".updateactivity" />
-        <activity android:name=".about" />
-        <activity android:name=".home" />
-        <activity android:name=".viewactivity" />
-        <activity android:name=".AdminLoginActivity" />
-        <activity android:name=".MainActivity" />
-        <activity android:name=".LoginActivity" />
-        <activity android:name=".Register" />
-        <activity android:name=".Splash">
+        <activity android:name=".ID"
+            android:label="ID activiry"
+            android:parentActivityName=".MainActivity">
+        </activity>
+
+        <activity android:name=".deleteactivity"
+            android:parentActivityName=".MainActivity"
+
+            android:label="Delete Appointment">
+        </activity>
+
+        <activity android:name=".updateactivity"
+            android:parentActivityName=".MainActivity"
+
+            android:label="update apppintment">
+        </activity>
+
+        <activity android:name=".about"
+            android:label="About">
+        </activity>
+
+        <activity android:name=".home"
+            android:label="lOGIN AND REGISTRATION">
+        </activity>
+
+        <activity android:name=".viewactivity"
+            android:label="View Appointment"
+            android:parentActivityName=".AdminLoginActivity">
+        </activity>
+
+        <activity android:name=".AdminLoginActivity"
+
+            android:label="Login Activity">
+        </activity>
+
+        <activity android:name=".MainActivity"
+            android:label="Insert data">
+        </activity>
+
+        <activity android:name=".LoginActivity"
+            android:label="Login ">
+        </activity>
+
+        <activity android:name=".Register"
+            android:parentActivityName=".LoginActivity"
+            android:label="Register">
+        </activity>
+
+        <activity android:name=".Splash"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

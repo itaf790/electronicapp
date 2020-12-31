@@ -180,7 +180,7 @@ public class MainActivity extends AppCompatActivity {
                     progressDialog.dismiss();
                     // Showing toast message after done uploading.
                     Toast.makeText(getApplicationContext(),
-                            "Image Uploaded Successfully ",
+                            "Your appointment has been booked successfully ",
                             Toast.LENGTH_LONG).show();
                     @SuppressWarnings("VisibleForTests")
 
