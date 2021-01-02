@@ -94,7 +94,7 @@
 
             <TextView
                 android:id="@+id/datte"
-                android:layout_width="137dp"
+                android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:text="time"
                 android:textColor="#2196F3"
@@ -121,7 +121,7 @@
 
             <TextView
                 android:id="@+id/tare5"
-                android:layout_width="137dp"
+                android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:text="date"
                 android:textColor="#2196F3"
