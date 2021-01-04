@@ -26,25 +26,25 @@
         android:textStyle="bold" />
 
     <TextView
+        android:id="@+id/lastname"
+        android:layout_width="326dp"
+        android:layout_height="51dp"
+        android:text="TextView"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/adress"
+        android:layout_width="326dp"
+        android:layout_height="51dp"
+        android:text="TextView"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+    <TextView
         android:id="@+id/phone"
-        android:layout_width="326dp"
-        android:layout_height="51dp"
-        android:text="TextView"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:visibility="gone" />
-
-    <TextView
-        android:id="@+id/date"
-        android:layout_width="326dp"
-        android:layout_height="51dp"
-        android:text="TextView"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:visibility="gone" />
-
-    <TextView
-        android:id="@+id/time"
         android:layout_width="326dp"
         android:layout_height="51dp"
         android:text="TextView"

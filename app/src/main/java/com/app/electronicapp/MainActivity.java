@@ -64,9 +64,9 @@ public class MainActivity extends AppCompatActivity {
         update = (Button)findViewById(R.id.update);
         insert= (Button)findViewById(R.id.Insert);
         Name = (EditText)findViewById(R.id.Name);
-        phone = (EditText)findViewById(R.id.phone);
-        time = (EditText)findViewById(R.id.time);
-        date = (EditText)findViewById(R.id.date);
+        phone = (EditText)findViewById(R.id.lastname);
+        time = (EditText)findViewById(R.id.phone);
+        date = (EditText)findViewById(R.id.adress);
         imgview = (ImageView)findViewById(R.id.imageView);
         progressDialog = new ProgressDialog(MainActivity.this);// context name as per your project name
        delete.setOnClickListener(new View.OnClickListener() {

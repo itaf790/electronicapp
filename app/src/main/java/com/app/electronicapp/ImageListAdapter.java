@@ -1,8 +1,5 @@
 package com.app.electronicapp;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.os.Bundle;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.os.Build;
@@ -49,10 +46,10 @@ public class ImageListAdapter extends ArrayAdapter<uploadinfo> {
         LayoutInflater inflater = LayoutInflater.from(mContext);
         convertView = inflater.inflate(this.mResource, parent,false);
         TextView imgName = convertView.findViewById(R.id.image_name);
-        TextView imgtime = convertView.findViewById(R.id.time);
-        TextView imgdate = convertView.findViewById(R.id.date);
+        TextView imgtime = convertView.findViewById(R.id.phone);
+        TextView imgdate = convertView.findViewById(R.id.adress);
 
-        TextView imgphone= convertView.findViewById(R.id.phone);
+        TextView imgphone= convertView.findViewById(R.id.lastname);
         ImageView imgView= convertView.findViewById(R.id.image_View);
         imgName.setText(imageName);
         imgtime.setText(TempImagetime);

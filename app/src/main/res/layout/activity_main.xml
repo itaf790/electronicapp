@@ -7,39 +7,40 @@
 
     <EditText
         android:id="@+id/Name"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="22dp"
-        android:layout_marginLeft="22dp"
-        android:layout_marginEnd="22dp"
-        android:layout_marginRight="22dp"
-        android:layout_marginBottom="22dp"
+        android:layout_width="367dp"
+        android:layout_height="69dp"
+        android:layout_marginTop="76dp"
         android:ems="10"
-        android:hint="Name"
+        android:hint="First Name"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/phone"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintBottom_toTopOf="@+id/lastname"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.9"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="17dp" />
+
 
     <EditText
-        android:id="@+id/date"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="22dp"
-        android:layout_marginLeft="22dp"
-        android:layout_marginEnd="22dp"
-        android:layout_marginRight="22dp"
-        android:layout_marginBottom="57dp"
+        android:id="@+id/adress"
+        android:layout_width="372dp"
+        android:layout_height="92dp"
         android:ems="10"
-        android:hint="date"
+        android:hint="adress"
+
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="522dp" />
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="369dp"
+        android:layout_height="71dp"
+        android:ems="10"
+        android:hint="email"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/Insert"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/time" />
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="17dp"
+        tools:layout_editor_absoluteY="438dp" />
 
     <Button
         android:id="@+id/Choose"
@@ -51,87 +52,74 @@
         android:text="Choose Image"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.719"
+        app:layout_constraintHorizontal_bias="0.46"
         app:layout_constraintStart_toEndOf="@+id/Insert"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.882" />
+        app:layout_constraintVertical_bias="0.916" />
 
-    <Button
-        android:id="@+id/update"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/button1"
-        android:text="update"
 
+    <LinearLayout
+        android:layout_width="369dp"
+        android:layout_height="73dp"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.676"
-        app:layout_constraintStart_toEndOf="@+id/delete"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.976" />
+        app:layout_constraintTop_toTopOf="@+id/textview"
+        app:layout_constraintVertical_bias="0.531"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="17dp">
 
-    <Button
-        android:id="@+id/delete"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/button1"
+        <com.gbksoft.countrycodepickerlib.CountryCodePicker
+            android:id="@+id/ccp"
+            android:layout_width="151dp"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            app:ccpDropDown_initialScrollToSelection="true"
+            app:ccpDropDown_keyboardAutoPopup="false"
+            app:ccpDropDown_searchEditTextTint="#00FF00"
+            app:ccp_areaCodeDetectedCountry="false"
+            app:ccp_autoDetectCountry="true"
+            app:ccp_countryPreference="us,ca,gb,nz"
+            app:ccp_hintExampleNumber="true" />
 
-        android:text="delete"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.091"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textview"
-        app:layout_constraintVertical_bias="0.974" />
+        <EditText
+            android:id="@+id/phone"
+            android:layout_width="190dp"
+            android:layout_height="wrap_content"
 
-    <EditText
-        android:id="@+id/time"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="22dp"
-        android:layout_marginLeft="22dp"
-        android:layout_marginEnd="22dp"
-        android:layout_marginRight="22dp"
-        android:layout_marginBottom="27dp"
-        android:ems="10"
-        android:hint="time,am/pm"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/date"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/phone" />
+            android:ems="10"
+            android:hint="Phone Number"
+            android:inputType="textPhonetic"
+            android:maxLength="9"
+            android:padding="20dp"
+            android:shadowColor="#8C7070"
+            android:textColor="#000000"
+            android:textColorHint="#201E1E" />
 
+    </LinearLayout>
 
     <Button
         android:id="@+id/Insert"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/button1"
-        android:text="Insert Data"
+        android:text="Book appointment"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.091"
+        app:layout_constraintHorizontal_bias="0.076"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.882" />
+        app:layout_constraintVertical_bias="0.916" />
 
     <EditText
-        android:id="@+id/phone"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="22dp"
-        android:layout_marginLeft="22dp"
-        android:layout_marginEnd="22dp"
-        android:layout_marginRight="22dp"
-        android:layout_marginBottom="25dp"
+        android:id="@+id/lastname"
+        android:layout_width="367dp"
+        android:layout_height="72dp"
         android:ems="10"
-        android:hint="Phone num"
+        android:hint="lastname"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/time"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Name" />
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="17dp"
+        tools:layout_editor_absoluteY="275dp" />
 
     <TextView
         android:id="@+id/textview"
@@ -147,6 +135,7 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/imageView"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
