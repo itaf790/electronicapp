@@ -2,36 +2,40 @@ package com.app.electronicapp;
 
 public class uploadinfo {
 
-
-         public String imageName;
+    public String imageURL;
+         public String imagefirstname;
+         public String imagelastname;
          public String imagephone;
-         public String imagetime;
-         public String imagedate;
-         public String imageURL;
+         public String imageadress;
+    public String imageagender;
     public uploadinfo() { }
 
-        public uploadinfo(String name, String phone, String date, String day, String url) {
-            this.imageName = name;
+        public uploadinfo(String fname, String phone, String lname, String adress, String url,String gender) {
+            this.imagefirstname = fname;
             this.imagephone =phone;
-            this.imagedate = date;
-            this.imagetime = day;
+            this.imageadress = adress;
+            this.imageagender = gender;
             this.imageURL = url;
+            this.imagelastname= lname;
         }
 
-        public String getImageName() {
-            return imageName;
+        public String getImagefirstname() {
+            return imagefirstname;
         }
         public String getImagephone() {
         return imagephone;
     }
-        public String getImagetime() {
-        return imagetime;
+        public String getImageadress() {
+        return imageadress;
     }
-        public String getImagedate() {
-        return imagedate;
+        public String getImageagender() {
+        return imageagender;
     }
         public String getImageURL() {
             return imageURL;
         }
+         public String getImagelastname() {
+        return imagelastname;
+    }
     }
 

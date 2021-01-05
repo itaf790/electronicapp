@@ -35,26 +35,30 @@ public class ImageListAdapter extends ArrayAdapter<uploadinfo> {
 
 
 
-        String TempImagetime = Objects.requireNonNull(getItem(position)).getImagetime();
-        String TempImagedate= Objects.requireNonNull(getItem(position)).getImagedate();
+        String TempImageadress = Objects.requireNonNull(getItem(position)).getImageadress();
+        String TempImagelastname= Objects.requireNonNull(getItem(position)).getImagelastname();
         String TempImagephone = Objects.requireNonNull(getItem(position)).getImagephone();
-        String imageName = Objects.requireNonNull(getItem(position)).getImageName();
+        String TempImagefirstname= Objects.requireNonNull(getItem(position)).getImagefirstname();
         String imageUrl = Objects.requireNonNull(getItem(position)).getImageURL();
+        String TempImagegender = Objects.requireNonNull(getItem(position)).getImageagender();
 
         //Create the employee object with the information
-        uploadinfo ImageInfo = new uploadinfo(imageName,TempImagetime,TempImagedate,TempImagephone,imageUrl);
+        uploadinfo ImageInfo = new uploadinfo(TempImagefirstname,TempImagelastname,TempImageadress,TempImagephone,TempImagegender, imageUrl);
         LayoutInflater inflater = LayoutInflater.from(mContext);
         convertView = inflater.inflate(this.mResource, parent,false);
-        TextView imgName = convertView.findViewById(R.id.image_name);
-        TextView imgtime = convertView.findViewById(R.id.phone);
-        TextView imgdate = convertView.findViewById(R.id.adress);
-
-        TextView imgphone= convertView.findViewById(R.id.lastname);
+        TextView imgfname = convertView.findViewById(R.id.image_name);
+        TextView  imglast= convertView.findViewById(R.id.lname);
+        TextView imgphone = convertView.findViewById(R.id.number);
+        TextView imgadress = convertView.findViewById(R.id.adress);
+        TextView imggender= convertView.findViewById(R.id.gender);
         ImageView imgView= convertView.findViewById(R.id.image_View);
-        imgName.setText(imageName);
-        imgtime.setText(TempImagetime);
-        imgdate.setText(TempImagedate);
+
+        imgfname.setText(TempImagefirstname);
+        imglast.setText(TempImagelastname);
+        imggender.setText(TempImagegender);
         imgphone.setText(TempImagephone);
+        imgadress.setText(TempImageadress);
+
 
         //Loading image from Glide library.
 

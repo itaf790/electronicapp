@@ -37,8 +37,8 @@ import java.io.IOException;
 public class MainActivity extends AppCompatActivity {
     FirebaseUser currentUser;//used to store current user of account
     FirebaseAuth mAuth;//Used for firebase authentication
-    Button insert, choose,update,delete;
-    EditText Name,phone,time,date ;
+    Button insert, choose;
+    EditText firstName,phone,adress,gender,LastName ;
     ImageView imgview;
     Uri FilePathUri;
     StorageReference storageReference;
@@ -60,31 +60,19 @@ public class MainActivity extends AppCompatActivity {
         storageReference = FirebaseStorage.getInstance().getReference();
         databaseReference = FirebaseDatabase.getInstance().getReference(Database_Path);
         choose = (Button)findViewById(R.id.Choose);
-        delete= (Button)findViewById(R.id.delete);
-        update = (Button)findViewById(R.id.update);
+
+
         insert= (Button)findViewById(R.id.Insert);
-        Name = (EditText)findViewById(R.id.Name);
-        phone = (EditText)findViewById(R.id.lastname);
-        time = (EditText)findViewById(R.id.phone);
-        date = (EditText)findViewById(R.id.adress);
+        firstName = (EditText)findViewById(R.id.fname);
+        LastName = (EditText)findViewById(R.id.lastname);
+        phone = (EditText)findViewById(R.id.number);
+        adress = (EditText)findViewById(R.id.adress);
+        gender = (EditText)findViewById(R.id.gender);
+
         imgview = (ImageView)findViewById(R.id.imageView);
         progressDialog = new ProgressDialog(MainActivity.this);// context name as per your project name
-       delete.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this,deleteactivity.class);
 
-                startActivity(intent);
-            }
-        });
-      update.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this,ID.class);
 
-                startActivity(intent);
-            }
-      });
         choose.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -98,9 +86,11 @@ public class MainActivity extends AppCompatActivity {
         insert.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-
                 UploadImageFileToFirebaseStorage();
+
+                Intent intent = new Intent(MainActivity.this,Calinder.class);
+                startActivity(intent);
+
 
             }
         });
@@ -172,10 +162,12 @@ public class MainActivity extends AppCompatActivity {
             }).addOnSuccessListener(new OnSuccessListener<Uri>() {
                 @Override
                 public void onSuccess(Uri uri) {
-                    String TempImageName = Name.getText().toString().trim();
-                    String TempImagetime = time.getText().toString().trim();
-                    String TempImagedate = date.getText().toString().trim();
+                    String TempImagefirstname = firstName.getText().toString().trim();
+                    String TempImagelastname = LastName.getText().toString().trim();
+                    String TempImageadress = adress.getText().toString().trim();
                     String TempImagephone = phone.getText().toString().trim();
+                    String TempImagegender = gender.getText().toString().trim();
+
                     // Hiding the progressDialog after done uploading.
                     progressDialog.dismiss();
                     // Showing toast message after done uploading.
@@ -185,7 +177,7 @@ public class MainActivity extends AppCompatActivity {
                     @SuppressWarnings("VisibleForTests")
 
                     uploadinfo imageUploadInfo = new uploadinfo(
-                            TempImageName,TempImagetime,TempImagephone,TempImagedate,uri.toString());
+                            TempImagefirstname,TempImagelastname,TempImagephone,TempImageadress, TempImagegender,uri.toString());
                     // Getting image upload ID.
 
                     // Adding image upload id s child element into databaseReference.

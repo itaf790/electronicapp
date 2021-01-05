@@ -37,10 +37,10 @@
             android:weightSum="1">
 
             <TextView
-                android:id="@+id/textView1"
-                android:layout_width="100dp"
+                android:id="@+id/Fname"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Name"
+                android:text="Fname"
                 android:textColor="#2196F3"
                 android:textSize="30dp" />
 
@@ -65,16 +65,43 @@
             android:weightSum="1">
 
             <TextView
-                android:id="@+id/textView2"
+                android:id="@+id/lastname"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="l name"
+                android:textColor="#2196F3"
+                android:textSize="30dp" />
+
+
+            <TextView
+                android:id="@+id/lastnamee"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Enter your details"
+                android:textSize="18dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/num"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:text="phone"
                 android:textColor="#2196F3"
                 android:textSize="30dp" />
 
-
             <TextView
-                android:id="@+id/Num"
+                android:id="@+id/number"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Enter your details"
@@ -93,21 +120,20 @@
             android:weightSum="1">
 
             <TextView
-                android:id="@+id/datte"
+                android:id="@+id/Adress"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:text="time"
+                android:text="adress"
                 android:textColor="#2196F3"
                 android:textSize="30dp" />
 
             <TextView
-                android:id="@+id/TIME"
+                android:id="@+id/adress"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Enter your details"
                 android:textSize="18dp" />
         </LinearLayout>
-
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -120,20 +146,27 @@
             android:weightSum="1">
 
             <TextView
-                android:id="@+id/tare5"
+                android:id="@+id/Gender"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:text="date"
+                android:text="gender"
                 android:textColor="#2196F3"
                 android:textSize="30dp" />
 
             <TextView
-                android:id="@+id/ttare5"
+                android:id="@+id/gender"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Enter your details"
                 android:textSize="18dp" />
         </LinearLayout>
+
+
+
+
+
+
+
 
     </LinearLayout>
 </RelativeLayout>

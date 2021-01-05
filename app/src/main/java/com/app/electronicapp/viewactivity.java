@@ -77,17 +77,20 @@ public class viewactivity extends AppCompatActivity {
                 listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                         uploadinfo current = (uploadinfo)parent.getItemAtPosition(position);
-                        String name= current.getImageName();
-                        String time= current.getImagetime();
-                        String date= current.getImagedate();
+                        String fname= current.getImagefirstname();
+                        String lname= current.getImagelastname();
+                        String adress= current.getImageadress();
                         String phone= current.getImagephone();
                         String  image =current.getImageURL();
+                        String  gender =current.getImageagender();
+
                         Intent intent = new Intent(viewactivity.this , DetailsActivity.class);
-                        intent.putExtra("name",name);
-                        intent.putExtra("time",time);
-                        intent.putExtra("date",date);
+                        intent.putExtra("firsr name",fname);
+                        intent.putExtra("last name",lname);
+                        intent.putExtra("adress",adress);
                         intent.putExtra("phone",phone);
                         intent.putExtra("image",image);
+                        intent.putExtra("image",gender);
 
 
                         startActivity(intent);

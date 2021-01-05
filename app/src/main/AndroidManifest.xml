@@ -9,61 +9,36 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Electronicapp">
-        <activity android:name=".DetailsActivity"
-            android:parentActivityName=".viewactivity"
-            android:label="
-Scheduled appointments">
-        </activity>
-
-        <activity android:name=".ID"
-            android:label="ID activiry"
-            android:parentActivityName=".MainActivity">
-        </activity>
-
-        <activity android:name=".deleteactivity"
-            android:parentActivityName=".MainActivity"
-
-            android:label="Delete Appointment">
-        </activity>
-
-        <activity android:name=".updateactivity"
-            android:parentActivityName=".MainActivity"
-
-            android:label="update apppintment">
-        </activity>
-
-        <activity android:name=".about"
-            android:label="About">
-        </activity>
-
-        <activity android:name=".home"
-            android:label="lOGIN AND REGISTRATION">
-        </activity>
-
-        <activity android:name=".viewactivity"
+        <activity android:name=".Calinder"></activity>
+        <activity
+            android:name=".DetailsActivity"
+            android:label=" Scheduled appointments"
+            android:parentActivityName=".viewactivity"></activity>
+        <activity
+            android:name=".about"
+            android:label="About"></activity>
+        <activity
+            android:name=".home"
+            android:label="lOGIN AND REGISTRATION"></activity>
+        <activity
+            android:name=".viewactivity"
             android:label="View Appointment"
-            android:parentActivityName=".AdminLoginActivity">
-        </activity>
-
-        <activity android:name=".AdminLoginActivity"
-
-            android:label="Login Activity">
-        </activity>
-
-        <activity android:name=".MainActivity"
-            android:label="Insert data">
-        </activity>
-
-        <activity android:name=".LoginActivity"
-            android:label="Login ">
-        </activity>
-
-        <activity android:name=".Register"
-            android:parentActivityName=".LoginActivity"
-            android:label="Register">
-        </activity>
-
-        <activity android:name=".Splash"
+            android:parentActivityName=".AdminLoginActivity"></activity>
+        <activity
+            android:name=".AdminLoginActivity"
+            android:label="Login Activity"></activity>
+        <activity
+            android:name=".MainActivity"
+            android:label="Insert data"></activity>
+        <activity
+            android:name=".LoginActivity"
+            android:label="Login "></activity>
+        <activity
+            android:name=".Register"
+            android:label="Register"
+            android:parentActivityName=".LoginActivity"></activity>
+        <activity
+            android:name=".Splash"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>

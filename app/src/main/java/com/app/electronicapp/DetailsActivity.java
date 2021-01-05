@@ -10,11 +10,13 @@ import com.bumptech.glide.Glide;
 import com.google.firebase.database.DatabaseReference;
 
 public class DetailsActivity extends AppCompatActivity {
-    private String name;
-    private String date;
-    private String time;
+    private String fname;
+    private String lname;
+    private String adress;
     private String phone;
     private String image;
+    private String gender;
+
 
     DatabaseReference databaseReference;
     @Override
@@ -23,30 +25,30 @@ public class DetailsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_details);
 
 
-
-
-
-
         Intent intent = getIntent();
 
-        TextView Name  = (TextView) findViewById(R.id.name);
-        TextView Phone  = (TextView) findViewById(R.id.Num);
-        TextView Time  = (TextView) findViewById(R.id.TIME);
-        TextView Date  = (TextView) findViewById(R.id.ttare5);
+        TextView firstName = (TextView) findViewById(R.id.name);
+        TextView Phone  = (TextView) findViewById(R.id.number);
+        TextView Lastname  = (TextView) findViewById(R.id.lastnamee);
+        TextView Address  = (TextView) findViewById(R.id.adress);
         ImageView Image = (ImageView)findViewById(R.id.IMAGE);
+        TextView Gender  = (TextView) findViewById(R.id.gender);
 
 
-        name=getIntent().getStringExtra("name").toString();
-        time=getIntent().getStringExtra("time").toString();
-        date=getIntent().getStringExtra("date").toString();
-      phone=getIntent().getStringExtra("phone").toString();
+       fname=getIntent().getStringExtra("first name").toString();
+        adress=getIntent().getStringExtra("adress").toString();
+        lname=getIntent().getStringExtra("last name").toString();
+        phone=getIntent().getStringExtra("phone").toString();
         image=getIntent().getStringExtra("image").toString();
+      gender=getIntent().getStringExtra("gender").toString();
 
 
-        Name.setText(name);
+       firstName.setText(fname);
         Phone.setText(phone);
-        Date.setText(time);
-        Time.setText(date);
+        Lastname.setText(lname);
+        Address.setText(adress);
+       Gender.setText(gender);
+
         Glide.with(this ).load(image).override(300, 300) .into(Image);
 
 
