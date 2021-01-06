@@ -79,18 +79,26 @@ public class viewactivity extends AppCompatActivity {
                         uploadinfo current = (uploadinfo)parent.getItemAtPosition(position);
                         String fname= current.getImagefirstname();
                         String lname= current.getImagelastname();
-                        String adress= current.getImageadress();
                         String phone= current.getImagephone();
-                        String  image =current.getImageURL();
+                        String adress= current.getImageadress();
                         String  gender =current.getImageagender();
+                        String  image =current.getImageURL();
+                        String date =current.getImagedate();
+                        String  time =current.getImagetime();
+                        String  duration =current.getImageduration();
+
 
                         Intent intent = new Intent(viewactivity.this , DetailsActivity.class);
                         intent.putExtra("firsr name",fname);
                         intent.putExtra("last name",lname);
-                        intent.putExtra("adress",adress);
                         intent.putExtra("phone",phone);
+                        intent.putExtra("adress",adress);
+                        intent.putExtra("gender",gender);
                         intent.putExtra("image",image);
-                        intent.putExtra("image",gender);
+                        intent.putExtra("date",date);
+                        intent.putExtra("time",time);
+                        intent.putExtra("duration",duration);
+
 
 
                         startActivity(intent);

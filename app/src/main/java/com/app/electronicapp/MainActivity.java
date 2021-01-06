@@ -1,31 +1,33 @@
 package com.app.electronicapp;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.os.Bundle;
-import android.content.Intent;
-import android.view.View;
-import android.widget.Button;
-
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
+import android.app.DatePickerDialog;
 import android.app.ProgressDialog;
+import android.app.TimePickerDialog;
 import android.content.ContentResolver;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.net.Uri;
+import android.os.Bundle;
 import android.provider.MediaStore;
+import android.view.View;
 import android.webkit.MimeTypeMap;
+import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TimePicker;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.Continuation;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;
@@ -33,21 +35,25 @@ import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
 import java.io.IOException;
+import java.util.Calendar;
 
 public class MainActivity extends AppCompatActivity {
+    Button btnDatePicker, btnTimePicker;
+    EditText date, time, duration;
+    private int mYear, mMonth, mDay, mHour, mMinute;
     FirebaseUser currentUser;//used to store current user of account
     FirebaseAuth mAuth;//Used for firebase authentication
     Button insert, choose;
-    EditText firstName,phone,adress,gender,LastName ;
+    EditText firstName, phone, adress, gender, LastName;
     ImageView imgview;
     Uri FilePathUri;
     StorageReference storageReference;
     DatabaseReference databaseReference;
     int Image_Request_Code = 7;
-    ProgressDialog progressDialog ;
+    ProgressDialog progressDialog;
     static String Storage_Path = "Uploads/";
     static String Database_Path = "phd_Database";
-    int ImageUploadId =0;
+    int ImageUploadId = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,19 +65,79 @@ public class MainActivity extends AppCompatActivity {
         currentUser = mAuth.getCurrentUser();
         storageReference = FirebaseStorage.getInstance().getReference();
         databaseReference = FirebaseDatabase.getInstance().getReference(Database_Path);
-        choose = (Button)findViewById(R.id.Choose);
+        choose = (Button) findViewById(R.id.Choose);
+        btnDatePicker = (Button) findViewById(R.id.btn_date);
+        btnTimePicker = (Button) findViewById(R.id.btn_time);
+        date = (EditText) findViewById(R.id.in_date);
+        time = (EditText) findViewById(R.id.in_time);
+        duration = (EditText) findViewById(R.id.DURATION);
 
 
-        insert= (Button)findViewById(R.id.Insert);
-        firstName = (EditText)findViewById(R.id.fname);
-        LastName = (EditText)findViewById(R.id.lastname);
-        phone = (EditText)findViewById(R.id.number);
-        adress = (EditText)findViewById(R.id.adress);
-        gender = (EditText)findViewById(R.id.gender);
+        insert = (Button) findViewById(R.id.Insert);
+        firstName = (EditText) findViewById(R.id.fname);
+        LastName = (EditText) findViewById(R.id.lastname);
+        phone = (EditText) findViewById(R.id.number);
+        adress = (EditText) findViewById(R.id.adress);
+        gender = (EditText) findViewById(R.id.gender);
 
-        imgview = (ImageView)findViewById(R.id.imageView);
-        progressDialog = new ProgressDialog(MainActivity.this);// context name as per your project name
 
+        imgview = (ImageView) findViewById(R.id.imageView);
+
+        btnDatePicker.setOnClickListener(new View.OnClickListener() {
+                                             @Override
+                                             public void onClick(View view) {
+
+                                                 if (view == btnDatePicker) {
+
+                                                     // Get Current Date
+                                                     final Calendar c = Calendar.getInstance();
+                                                     mYear = c.get(Calendar.YEAR);
+                                                     mMonth = c.get(Calendar.MONTH);
+                                                     mDay = c.get(Calendar.DAY_OF_MONTH);
+
+                                                     DatePickerDialog datePickerDialog = new DatePickerDialog(MainActivity.this,
+                                                             new DatePickerDialog.OnDateSetListener() {
+
+                                                                 @Override
+                                                                 public void onDateSet(DatePicker view, int year,
+                                                                                       int monthOfYear, int dayOfMonth) {
+
+                                                                     date.setText(dayOfMonth + "-" + (monthOfYear + 1) + "-" + year);
+
+                                                                 }
+                                                             }, mYear, mMonth, mDay);
+                                                     datePickerDialog.show();
+                                                 }
+
+                                             }
+                                         });
+
+                      btnTimePicker.setOnClickListener(new View.OnClickListener() {
+                                                         @Override
+                                                         public void onClick(View view) {
+
+                                                 if (view == btnTimePicker) {
+
+                                                     // Get Current Time
+                                                     final Calendar c = Calendar.getInstance();
+                                                     mHour = c.get(Calendar.HOUR_OF_DAY);
+                                                     mMinute = c.get(Calendar.MINUTE);
+
+                                                     // Launch Time Picker Dialog
+                                                     TimePickerDialog timePickerDialog = new TimePickerDialog(MainActivity.this,
+                                                             new TimePickerDialog.OnTimeSetListener() {
+
+                                                                 @Override
+                                                                 public void onTimeSet(TimePicker view, int hourOfDay,
+                                                                                       int minute) {
+
+                                                                     time.setText(hourOfDay + ":" + minute);
+                                                                 }
+                                                             }, mHour, mMinute, false);
+                                                     timePickerDialog.show();
+                                                 }
+                                             }
+                                                       });
 
         choose.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -87,10 +153,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 UploadImageFileToFirebaseStorage();
-
-                Intent intent = new Intent(MainActivity.this,Calinder.class);
-                startActivity(intent);
-
 
             }
         });
@@ -167,17 +229,19 @@ public class MainActivity extends AppCompatActivity {
                     String TempImageadress = adress.getText().toString().trim();
                     String TempImagephone = phone.getText().toString().trim();
                     String TempImagegender = gender.getText().toString().trim();
-
+                    String TempImagedate = date.getText().toString().trim();
+                    String TempImagetime = time.getText().toString().trim();
+                    String TempImageduration = duration.getText().toString().trim();
                     // Hiding the progressDialog after done uploading.
                     progressDialog.dismiss();
                     // Showing toast message after done uploading.
                     Toast.makeText(getApplicationContext(),
-                            "Your appointment has been booked successfully ",
+                            "Image Uploaded Successfully ",
                             Toast.LENGTH_LONG).show();
                     @SuppressWarnings("VisibleForTests")
 
                     uploadinfo imageUploadInfo = new uploadinfo(
-                            TempImagefirstname,TempImagelastname,TempImagephone,TempImageadress, TempImagegender,uri.toString());
+                            TempImagefirstname,TempImagelastname,TempImageadress,TempImagephone,TempImagegender,TempImagedate,TempImagetime,TempImageduration,uri.toString());
                     // Getting image upload ID.
 
                     // Adding image upload id s child element into databaseReference.
@@ -201,9 +265,8 @@ public class MainActivity extends AppCompatActivity {
         else {
             Toast.makeText(MainActivity.this,
 
-                    "Please Select Image or Add Image Name",
+                    "Please Select Image ",
                     Toast.LENGTH_LONG).show();
         }
     }
 }
-

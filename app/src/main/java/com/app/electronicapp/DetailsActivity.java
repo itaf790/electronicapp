@@ -16,6 +16,10 @@ public class DetailsActivity extends AppCompatActivity {
     private String phone;
     private String image;
     private String gender;
+    private String date;
+    private String time;
+    private String duration;
+
 
 
     DatabaseReference databaseReference;
@@ -28,30 +32,44 @@ public class DetailsActivity extends AppCompatActivity {
         Intent intent = getIntent();
 
         TextView firstName = (TextView) findViewById(R.id.name);
-        TextView Phone  = (TextView) findViewById(R.id.number);
         TextView Lastname  = (TextView) findViewById(R.id.lastnamee);
+        TextView Phone  = (TextView) findViewById(R.id.number);
         TextView Address  = (TextView) findViewById(R.id.adress);
-        ImageView Image = (ImageView)findViewById(R.id.IMAGE);
         TextView Gender  = (TextView) findViewById(R.id.gender);
+        ImageView Image = (ImageView)findViewById(R.id.IMAGE);
+        TextView datee  = (TextView) findViewById(R.id.datee);
+        TextView timee  = (TextView) findViewById(R.id.TTime);
+        TextView durationn  = (TextView) findViewById(R.id.DUR);
 
 
        fname=getIntent().getStringExtra("first name").toString();
-        adress=getIntent().getStringExtra("adress").toString();
-        lname=getIntent().getStringExtra("last name").toString();
         phone=getIntent().getStringExtra("phone").toString();
+        lname=getIntent().getStringExtra("last name").toString();
+
+        adress=getIntent().getStringExtra("adress").toString();
+
         image=getIntent().getStringExtra("image").toString();
-      gender=getIntent().getStringExtra("gender").toString();
+        gender=getIntent().getStringExtra("gender").toString();
+       date=getIntent().getStringExtra("date").toString();
+        time=getIntent().getStringExtra("time").toString();
+       duration=getIntent().getStringExtra("duration").toString();
 
 
-       firstName.setText(fname);
+
+
+
+        firstName.setText(fname);
         Phone.setText(phone);
         Lastname.setText(lname);
         Address.setText(adress);
-       Gender.setText(gender);
+      datee.setText(date);
+        timee.setText(time);
+        Gender.setText(gender);
+        durationn.setText(duration);
 
         Glide.with(this ).load(image).override(300, 300) .into(Image);
 
-
+        Gender.setText(gender);
 
     }
 }

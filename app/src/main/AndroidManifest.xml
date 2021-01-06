@@ -9,34 +9,34 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Electronicapp">
-        <activity android:name=".Calinder"></activity>
+        <activity android:name=".confirmuser"></activity>
         <activity
             android:name=".DetailsActivity"
             android:label=" Scheduled appointments"
-            android:parentActivityName=".viewactivity"></activity>
+            android:parentActivityName=".viewactivity" />
         <activity
             android:name=".about"
-            android:label="About"></activity>
+            android:label="About" />
         <activity
             android:name=".home"
-            android:label="lOGIN AND REGISTRATION"></activity>
+            android:label="lOGIN AND REGISTRATION" />
         <activity
             android:name=".viewactivity"
             android:label="View Appointment"
-            android:parentActivityName=".AdminLoginActivity"></activity>
+            android:parentActivityName=".AdminLoginActivity" />
         <activity
             android:name=".AdminLoginActivity"
-            android:label="Login Activity"></activity>
+            android:label="Login Activity" />
         <activity
             android:name=".MainActivity"
-            android:label="Insert data"></activity>
+            android:label="Insert data" />
         <activity
             android:name=".LoginActivity"
-            android:label="Login "></activity>
+            android:label="Login " />
         <activity
             android:name=".Register"
             android:label="Register"
-            android:parentActivityName=".LoginActivity"></activity>
+            android:parentActivityName=".LoginActivity" />
         <activity
             android:name=".Splash"
             android:configChanges="orientation|keyboardHidden|screenSize"
