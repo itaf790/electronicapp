@@ -10,7 +10,7 @@ import com.bumptech.glide.Glide;
 import com.google.firebase.database.DatabaseReference;
 
 public class DetailsActivity extends AppCompatActivity {
-    private String fname;
+    private String firstname ;
     private String lname;
     private String adress;
     private String phone;
@@ -31,7 +31,7 @@ public class DetailsActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
 
-        TextView firstName = (TextView) findViewById(R.id.name);
+        TextView Fname  = (TextView) findViewById(R.id.name);
         TextView Lastname  = (TextView) findViewById(R.id.lastnamee);
         TextView Phone  = (TextView) findViewById(R.id.number);
         TextView Address  = (TextView) findViewById(R.id.adress);
@@ -42,7 +42,7 @@ public class DetailsActivity extends AppCompatActivity {
         TextView durationn  = (TextView) findViewById(R.id.DUR);
 
 
-       fname=getIntent().getStringExtra("first name").toString();
+
         phone=getIntent().getStringExtra("phone").toString();
         lname=getIntent().getStringExtra("last name").toString();
 
@@ -50,19 +50,19 @@ public class DetailsActivity extends AppCompatActivity {
 
         image=getIntent().getStringExtra("image").toString();
         gender=getIntent().getStringExtra("gender").toString();
-       date=getIntent().getStringExtra("date").toString();
+        date=getIntent().getStringExtra("date").toString();
         time=getIntent().getStringExtra("time").toString();
-       duration=getIntent().getStringExtra("duration").toString();
+        duration=getIntent().getStringExtra("duration").toString();
 
 
 
 
 
-        firstName.setText(fname);
+
         Phone.setText(phone);
         Lastname.setText(lname);
         Address.setText(adress);
-      datee.setText(date);
+        datee.setText(date);
         timee.setText(time);
         Gender.setText(gender);
         durationn.setText(duration);

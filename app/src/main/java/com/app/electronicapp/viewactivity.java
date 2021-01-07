@@ -82,10 +82,11 @@ public class viewactivity extends AppCompatActivity {
                         String phone= current.getImagephone();
                         String adress= current.getImageadress();
                         String  gender =current.getImageagender();
-                        String  image =current.getImageURL();
-                        String date =current.getImagedate();
                         String  time =current.getImagetime();
+                        String date =current.getImagedate();
+
                         String  duration =current.getImageduration();
+                        String  image =current.getImageURL();
 
 
                         Intent intent = new Intent(viewactivity.this , DetailsActivity.class);
@@ -94,10 +95,13 @@ public class viewactivity extends AppCompatActivity {
                         intent.putExtra("phone",phone);
                         intent.putExtra("adress",adress);
                         intent.putExtra("gender",gender);
-                        intent.putExtra("image",image);
-                        intent.putExtra("date",date);
                         intent.putExtra("time",time);
+                        intent.putExtra("date",date);
                         intent.putExtra("duration",duration);
+                        intent.putExtra("image",image);
+
+
+
 
 
 

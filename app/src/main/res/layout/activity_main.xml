@@ -10,15 +10,15 @@
         android:id="@+id/fname"
         android:layout_width="300dp"
         android:layout_height="40dp"
-        android:background="@drawable/inputs"
+
         android:ems="10"
-        android:gravity="center"
+        android:gravity="left"
         android:hint="First Name"
         android:inputType="textPersonName"
         android:maxLength="15"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.19"
+        app:layout_constraintVertical_bias="0.22"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="55dp" />
 
@@ -26,15 +26,15 @@
         android:id="@+id/adress"
         android:layout_width="300dp"
         android:layout_height="40dp"
-        android:background="@drawable/inputs"
+
         android:ems="10"
 
-        android:gravity="center|center_horizontal"
+        android:gravity="left"
         android:hint="adress"
         android:maxLength="30"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="@+id/textview"
-        app:layout_constraintVertical_bias="0.509"
+        app:layout_constraintVertical_bias="0.545"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="55dp" />
 
@@ -42,41 +42,41 @@
         android:id="@+id/gender"
         android:layout_width="300dp"
         android:layout_height="40dp"
-        android:background="@drawable/inputs"
+
         android:ems="10"
-        android:gravity="center"
+        android:gravity="left"
 
         android:hint="gender:male/female"
         android:maxLength="6"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.589"
+        app:layout_constraintVertical_bias="0.646"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="55dp" />
 
     <Button
         android:id="@+id/Choose"
-        android:layout_width="200dp"
-        android:layout_height="40dp"
+        android:layout_width="162dp"
+        android:layout_height="37dp"
         android:background="@drawable/button1"
         android:text="Choose Image"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.02"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.918" />
+        app:layout_constraintVertical_bias="0.972" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="300dp"
         android:layout_height="60dp"
-        android:background="@drawable/inputs"
+
         android:gravity="center_horizontal"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="@+id/textview"
-        app:layout_constraintVertical_bias="0.418"
+        app:layout_constraintVertical_bias="0.454"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="55dp">
 
@@ -119,7 +119,7 @@
         android:text="Book appointment"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.971"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.976" />
@@ -128,35 +128,17 @@
         android:id="@+id/lastname"
         android:layout_width="300dp"
         android:layout_height="40dp"
-        android:background="@drawable/inputs"
+
         android:ems="10"
-        android:gravity="center"
+        android:gravity="left"
         android:hint="lastname"
         android:inputType="textPersonName"
         android:maxLength="15"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.347"
+        app:layout_constraintVertical_bias="0.369"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="55dp" />
-
-    <TextView
-        android:id="@+id/textview"
-        android:layout_width="411dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="116dp"
-        android:gravity="center"
-        android:text="Insert Data"
-        android:textAllCaps="false"
-        android:textColor="#2196F3"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.148" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -168,7 +150,7 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.114" />
+        app:layout_constraintVertical_bias="0.079" />
 
     <EditText
         android:id="@+id/in_date"
@@ -179,10 +161,10 @@
         android:layout_alignParentTop="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.339"
+        app:layout_constraintHorizontal_bias="0.636"
         app:layout_constraintStart_toEndOf="@+id/btn_date"
         app:layout_constraintTop_toBottomOf="@+id/in_time"
-        app:layout_constraintVertical_bias="0.087" />
+        app:layout_constraintVertical_bias="0.104" />
 
     <Button
         android:id="@+id/btn_date"
@@ -194,8 +176,8 @@
         android:text="SELECT DATE"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.761"
-        tools:layout_editor_absoluteX="27dp" />
+        app:layout_constraintVertical_bias="0.815"
+        tools:layout_editor_absoluteX="16dp" />
 
     <EditText
         android:id="@+id/in_time"
@@ -207,10 +189,10 @@
         android:layout_marginStart="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.27"
+        app:layout_constraintHorizontal_bias="0.567"
         app:layout_constraintStart_toEndOf="@+id/btn_time"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.669" />
+        app:layout_constraintVertical_bias="0.724" />
 
     <Button
         android:id="@+id/btn_time"
@@ -222,10 +204,10 @@
         android:text="SELECT TIME"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.088"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.672" />
+        app:layout_constraintVertical_bias="0.727" />
 
     <EditText
         android:id="@+id/DURATION"
@@ -234,16 +216,33 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentBottom="true"
-        android:background="@drawable/inputs"
+
         android:ems="10"
-        android:gravity="center"
+        android:gravity="left"
         android:hint="The duration of the meeting"
         android:inputType="textPersonName"
         android:maxLength="15"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.839"
+        app:layout_constraintVertical_bias="0.894"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="55dp" />
+        tools:layout_editor_absoluteX="36dp" />
+
+    <TextView
+        android:id="@+id/textview"
+        android:layout_width="411dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Insert Data"
+        android:textAllCaps="false"
+        android:textColor="#2196F3"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.022" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

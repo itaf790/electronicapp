@@ -17,7 +17,7 @@
 
     <TextView
 
-        android:id="@+id/image_name"
+        android:id="@+id/ffname"
         android:layout_width="wrap_content"
         android:layout_height="90dp"
         android:gravity="center_horizontal|center_vertical"
@@ -33,7 +33,14 @@
         android:textSize="24sp"
         android:textStyle="bold"
         android:visibility="gone" />
-
+    <TextView
+        android:id="@+id/phoneeee"
+        android:layout_width="326dp"
+        android:layout_height="51dp"
+        android:text="TextView"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:visibility="gone" />
     <TextView
         android:id="@+id/adress"
         android:layout_width="326dp"
@@ -43,8 +50,9 @@
         android:textStyle="bold"
         android:visibility="gone" />
 
+
     <TextView
-        android:id="@+id/number"
+        android:id="@+id/gender"
         android:layout_width="326dp"
         android:layout_height="51dp"
         android:text="TextView"
@@ -52,7 +60,23 @@
         android:textStyle="bold"
         android:visibility="gone" />
     <TextView
-        android:id="@+id/gender"
+    android:id="@+id/TIME"
+    android:layout_width="326dp"
+    android:layout_height="51dp"
+    android:text="TextView"
+    android:textSize="24sp"
+    android:textStyle="bold"
+    android:visibility="gone" />
+    <TextView
+        android:id="@+id/DATE"
+        android:layout_width="326dp"
+        android:layout_height="51dp"
+        android:text="TextView"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:visibility="gone" />
+    <TextView
+        android:id="@+id/DURRATION"
         android:layout_width="326dp"
         android:layout_height="51dp"
         android:text="TextView"
